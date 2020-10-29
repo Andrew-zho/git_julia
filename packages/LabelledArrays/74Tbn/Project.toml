@@ -1,0 +1,24 @@
+name = "LabelledArrays"
+uuid = "2ee39098-c373-598a-b85f-a56591580800"
+authors = ["Chris Rackauckas <accounts@chrisrackauckas.com>"]
+version = "1.3.0"
+
+[deps]
+ArrayInterface = "4fba245c-0d91-5ea0-9b3e-6abc04ee57a9"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+MacroTools = "1914dd2f-81c6-5fcd-8719-6d5c9610ff09"
+StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
+
+[compat]
+ArrayInterface = "2.8"
+MacroTools = "0.5"
+StaticArrays = "0.10, 0.11, 0.12"
+julia = "1"
+
+[extras]
+InteractiveUtils = "b77e0a4c-d291-57a0-90e8-8db25a27a240"
+OrdinaryDiffEq = "1dea7af3-3e70-54e6-95c3-0bf5283fa5ed"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test", "OrdinaryDiffEq", "InteractiveUtils"]

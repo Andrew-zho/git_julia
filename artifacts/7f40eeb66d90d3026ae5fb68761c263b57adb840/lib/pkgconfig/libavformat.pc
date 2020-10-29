@@ -1,0 +1,14 @@
+prefix=/workspace/destdir
+exec_prefix=${prefix}
+libdir=/workspace/destdir/lib
+includedir=/workspace/destdir/include
+
+Name: libavformat
+Description: FFmpeg container format library
+Version: 58.45.100
+Requires: 
+Requires.private: libavcodec >= 58.91.100, libswresample >= 3.7.100, libavutil >= 56.51.100
+Conflicts:
+Libs: -L${libdir}  -lavformat 
+Libs.private: -lm -lbz2 -L/workspace/destdir/lib -lz -L/workspace/destdir/lib -lssl -L/workspace/destdir/lib -ldl -pthread -lcrypto -ldl -pthread
+Cflags: -I${includedir}

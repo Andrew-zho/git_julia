@@ -1,0 +1,13 @@
+.DS_Store
+/docs/build/
+/docs/site/
+*.jl.cov
+*.jl.*.cov
+*.jl.mem
+src/#*#
+tests/#*#
+*~
+*.mem
+src/svmlwrap.jl
+deps/build.log
+Manifest.toml

@@ -1,0 +1,79 @@
+using BandedMatrices, LinearAlgebra, ArrayLayouts, Test
+import BandedMatrices: BandedColumns, BandedRows
+
+
+@testset "Triangular" begin
+    @testset "Upper" begin
+        for (t, ud) in ((UpperTriangular, 'N'), (UnitUpperTriangular, 'U'))
+            A = t(brand(10,10,1,2))
+            @test isbanded(A)
+            @test MemoryLayout(typeof(A)) == TriangularLayout{'U',ud,BandedColumns{DenseColumnMajor}}()
+            @test bandwidths(A) == bandwidths(BandedMatrix(A)) == (0,2)
+            @test bandwidth(A,2) == 2
+            @test BandedMatrix(A) == A
+            @test A[2,1] == 0
+            if( ud == 'U' )
+                @test A[2,2] == 1
+            end
+            x=rand(10)
+            @test A*x ≈ BandedMatrix(A)*x ≈ Matrix(A)*x
+            @test transpose(A)*x ≈ transpose(BandedMatrix(A))*x ≈ transpose(Matrix(A))*x
+            @test all(A*x .=== lmul!(A, copy(x)) .=== lmul(A,x) .===
+                        BandedMatrices.tbmv!('U', 'N', ud, 10, 2, parent(A).data, copy(x)))
+            @test_throws DimensionMismatch BandedMatrices.tbmv('U', 'N', ud, 10, 2, parent(A).data, rand(9))
+
+            @test A\x ≈ Matrix(A) \ x ≈ BandedMatrix(A) \ x
+            @test all((A \ x) .=== ldiv!(A, copy(x)) .=== copyto!(similar(x), Ldiv(A, x)) .=== (similar(x) .= Ldiv(A, x)) .===
+                        BandedMatrices.tbsv!('U', 'N', ud, 10, 2, parent(A).data, copy(x)))
+            @test_throws DimensionMismatch BandedMatrices.tbsv('U', 'N', ud, 10, 2, parent(A).data, rand(9))
+        end
+    end
+    @testset "Lower" begin
+        for (t, ud) in ((LowerTriangular, 'N'), (UnitLowerTriangular, 'U'))
+            A = t(brand(10,10,1,2))
+            @test isbanded(A)
+            @test MemoryLayout(typeof(A)) == TriangularLayout{'L', ud,BandedColumns{DenseColumnMajor}}()
+            @test bandwidths(A) == bandwidths(BandedMatrix(A)) == (1,0)
+            @test bandwidth(A,2) == 0
+            @test BandedMatrix(A) == A
+            @test A[1,2] == 0
+            if( ud == 'U' )
+                @test A[2,2] == 1
+            end
+
+            x=rand(10)
+            @test A*x ≈ Matrix(A)*x
+            @test transpose(A)*x ≈ transpose(BandedMatrix(A))*x ≈ transpose(Matrix(A))*x
+            @test all(A*x .=== lmul!(A, copy(x)) .=== lmul(A,x) .===
+                        BandedMatrices.tbmv!('L', 'N', ud, 10, 1, view(parent(A).data, 3:4,:), copy(x)))
+            @test_throws DimensionMismatch BandedMatrices.tbmv('L', 'N', ud, 10, 1, view(parent(A).data, 3:4,:), rand(9))
+
+            @test A\x ≈ Matrix(A) \ x ≈ BandedMatrix(A) \ x
+            @test all((A \ x) .=== ldiv!(A, copy(x)) .=== copyto!(similar(x), Ldiv(A, x)) .=== (similar(x) .= Ldiv(A, x)) .===
+                        BandedMatrices.tbsv!('L', 'N', ud, 10, 1, view(parent(A).data, 3:4,:), copy(x)))
+            @test_throws DimensionMismatch BandedMatrices.tbsv('L', 'N', ud, 10, 1, view(parent(A).data, 3:4,:), rand(9))
+        end
+    end
+
+    @testset "subarray" begin
+        A = brand(6,6,2,1)
+        L = LowerTriangular(A)
+        U = UpperTriangular(A)
+        V = view(L,2:4,1:3)
+        @test MemoryLayout(V) isa BandedColumns{DenseColumnMajor}
+        @test L[2:4,1:3] == BandedMatrix(V) == LowerTriangular(Matrix(A))[2:4,1:3]
+        @test L[2:4,1:3] isa BandedMatrix
+        @test bandwidths(L[2:4,1:3]) == bandwidths(V) == (1,1)
+        @test U[2:4,1:3] == UpperTriangular(Matrix(A))[2:4,1:3]
+        @test U[2:4,1:3] isa BandedMatrix
+        @test bandwidths(U[2:4,1:3]) == (-1,2)
+    end
+
+    @testset "row major" begin
+        A = brand(5,5,2,1)
+        b = randn(5)
+        U = UpperTriangular(A')
+        @test MemoryLayout(U) isa TriangularLayout{'U','N',BandedRows{DenseColumnMajor}}
+        @test ArrayLayouts.lmul!(U,copy(b)) ≈ U*b
+    end
+end

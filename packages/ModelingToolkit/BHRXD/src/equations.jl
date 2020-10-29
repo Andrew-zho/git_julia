@@ -1,0 +1,65 @@
+"""
+$(TYPEDEF)
+
+An equality relationship between two expressions.
+
+# Fields
+$(FIELDS)
+"""
+struct Equation
+    """The expression on the left-hand side of the equation."""
+    lhs::Expression
+    """The expression on the right-hand side of the equation."""
+    rhs::Expression
+end
+Base.:(==)(a::Equation, b::Equation) = isequal((a.lhs, a.rhs), (b.lhs, b.rhs))
+Base.hash(a::Equation, salt::UInt) = hash(a.lhs, hash(a.rhs, salt))
+
+"""
+$(TYPEDSIGNATURES)
+
+Create an [`Equation`](@ref) out of two [`Expression`](@ref) instances, or an
+`Expression` and a `Number`.
+
+# Examples
+
+```jldoctest
+julia> using ModelingToolkit
+
+julia> @variables x y;
+
+julia> x ~ y
+Equation(x(), y())
+
+julia> x - y ~ 0
+Equation(x() - y(), ModelingToolkit.Constant(0))
+```
+"""
+Base.:~(lhs::Expression, rhs::Expression) = Equation(lhs, rhs)
+Base.:~(lhs::Expression, rhs::Number    ) = Equation(lhs, rhs)
+Base.:~(lhs::Number    , rhs::Expression) = Equation(lhs, rhs)
+
+struct ConstrainedEquation
+  constraints
+  eq
+end
+
+
+Base.Expr(op::Equation) = simplified_expr(op)
+
+function _eq_unordered(a, b)
+    length(a) === length(b) || return false
+    n = length(a)
+    idxs = Set(1:n)
+    for x ∈ a
+        idx = findfirst(isequal(x), b)
+        idx === nothing && return false
+        idx ∈ idxs      || return false
+        delete!(idxs, idx)
+    end
+    return true
+end
+
+function expand_derivatives(eq::Equation, simplify=true)
+    return Equation(expand_derivatives(eq.lhs, simplify), expand_derivatives(eq.rhs, simplify))
+end

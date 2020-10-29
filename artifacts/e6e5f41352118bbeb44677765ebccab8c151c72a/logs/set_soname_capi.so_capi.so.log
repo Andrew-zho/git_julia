@@ -1,0 +1,1 @@
+`/usr/bin/patchelf --set-soname capi.so lib/engines-1.1/capi.so`

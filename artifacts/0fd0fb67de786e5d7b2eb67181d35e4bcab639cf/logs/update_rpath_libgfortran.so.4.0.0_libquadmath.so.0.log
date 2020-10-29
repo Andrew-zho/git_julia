@@ -1,0 +1,1 @@
+`/usr/bin/patchelf --set-rpath '/workspace/destdir/x86_64-linux-gnu/lib/../lib64:$ORIGIN' lib/libgfortran.so.4.0.0`

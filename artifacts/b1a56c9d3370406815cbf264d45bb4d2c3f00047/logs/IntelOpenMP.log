@@ -1,0 +1,258 @@
+BinaryBuilder.jl version: 0.2.0 (gitsha unavailable)
+
+`/bin/bash -l -c 'set -x
+cc --version
+c++ --version
+gcc --version
+g++ --version
+clang --version
+clang++ --version
+objc --version
+f77 --version
+gfortran --version
+ld -v
+'`
+verbose sandbox enabled (running in privileged container mode)
+Parsed --rootfs as "/workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs"
+Parsed --cd as "/workspace/srcdir"
+Parsed --workspace as "/workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb" -> "/workspace"
+Parsed --workspace as "/workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/metadir" -> "/meta"
+Parsed --workspace as "/tmp/jl_Dpxtwj" -> "/opt/bin"
+Parsed --workspace as "/storage/ccache" -> "/root/.ccache"
+Parsed --map as "/workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/PlatformSupport-x86_64-linux-gnu.v2019.11.11.x86_64-linux-musl.squashfs" -> "/opt/x86_64-linux-gnu/PlatformSupport-2019.11.11"
+Parsed --map as "/workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/GCCBootstrap-x86_64-linux-gnu.v4.8.5.x86_64-linux-musl.squashfs" -> "/opt/x86_64-linux-gnu/GCCBootstrap-4.8.5"
+Parsed --map as "/workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/LLVMBootstrap.v8.0.0.x86_64-linux-musl.squashfs" -> "/opt/x86_64-linux-musl/LLVMBootstrap-8.0.0"
+Parsed --map as "/workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/PlatformSupport-x86_64-linux-musl.v2019.11.11.x86_64-linux-musl.squashfs" -> "/opt/x86_64-linux-musl/PlatformSupport-2019.11.11"
+Parsed --map as "/workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/GCCBootstrap-x86_64-linux-musl.v4.8.5.x86_64-linux-musl.squashfs" -> "/opt/x86_64-linux-musl/GCCBootstrap-4.8.5"
+--> Creating overlay workdir at /proc
+--> Mounting overlay of /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs at /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs (modifications in /proc/upper/rootfs, workspace in /proc/work/rootfs)
+--> mapping /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/GCCBootstrap-x86_64-linux-musl.v4.8.5.x86_64-linux-musl.squashfs to /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/opt/x86_64-linux-musl/GCCBootstrap-4.8.5
+--> mapping /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/PlatformSupport-x86_64-linux-musl.v2019.11.11.x86_64-linux-musl.squashfs to /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/opt/x86_64-linux-musl/PlatformSupport-2019.11.11
+--> mapping /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/LLVMBootstrap.v8.0.0.x86_64-linux-musl.squashfs to /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/opt/x86_64-linux-musl/LLVMBootstrap-8.0.0
+--> mapping /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/GCCBootstrap-x86_64-linux-gnu.v4.8.5.x86_64-linux-musl.squashfs to /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/opt/x86_64-linux-gnu/GCCBootstrap-4.8.5
+--> mapping /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/PlatformSupport-x86_64-linux-gnu.v2019.11.11.x86_64-linux-musl.squashfs to /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/opt/x86_64-linux-gnu/PlatformSupport-2019.11.11
+--> Mounting overlay of /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/opt/x86_64-linux-gnu/PlatformSupport-2019.11.11:/workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/opt/x86_64-linux-gnu/GCCBootstrap-4.8.5 at /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/opt/x86_64-linux-gnu (modifications in /proc/upper/x86_64-linux-gnu, workspace in /proc/work/x86_64-linux-gnu)
+--> Mounting overlay of /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/opt/x86_64-linux-musl/LLVMBootstrap-8.0.0:/workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/opt/x86_64-linux-musl/PlatformSupport-2019.11.11:/workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/opt/x86_64-linux-musl/GCCBootstrap-4.8.5 at /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/opt/x86_64-linux-musl (modifications in /proc/upper/x86_64-linux-musl, workspace in /proc/work/x86_64-linux-musl)
+--> Mounting procfs at /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/proc
+--> Mounting /dev/null at /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/dev/null
+--> Mounting /dev/tty at /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/dev/tty
+--> Mounting /dev/urandom at /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/dev/urandom
+--> workspacing /storage/ccache to /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/root/.ccache
+--> workspacing /tmp/jl_Dpxtwj to /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/opt/bin
+--> workspacing /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/metadir to /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/meta
+--> workspacing /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb to /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/workspace
+--> Mounting procfs at /proc
+About to run `/bin/bash` `-l` `-c` `set -x
+cc --version
+c++ --version
+gcc --version
+g++ --version
+clang --version
+clang++ --version
+objc --version
+f77 --version
+gfortran --version
+ld -v
+` 
++ cc --version
+x86_64-linux-gnu-gcc (GCC) 4.8.5
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
++ c++ --version
+x86_64-linux-gnu-g++ (GCC) 4.8.5
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
++ gcc --version
+x86_64-linux-gnu-gcc (GCC) 4.8.5
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
++ g++ --version
+x86_64-linux-gnu-g++ (GCC) 4.8.5
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
++ clang --version
+clang version 8.0.0 (tags/RELEASE_800/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /opt/x86_64-linux-musl/bin
++ clang++ --version
+clang version 8.0.0 (tags/RELEASE_800/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /opt/x86_64-linux-musl/bin
++ objc --version
+clang version 8.0.0 (tags/RELEASE_800/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /opt/x86_64-linux-musl/bin
++ f77 --version
+GNU Fortran (GCC) 4.8.5
+Copyright (C) 2015 Free Software Foundation, Inc.
+
+GNU Fortran comes with NO WARRANTY, to the extent permitted by law.
+You may redistribute copies of GNU Fortran
+under the terms of the GNU General Public License.
+For more information about these matters, see the file named COPYING
+
++ gfortran --version
+GNU Fortran (GCC) 4.8.5
+Copyright (C) 2015 Free Software Foundation, Inc.
+
+GNU Fortran comes with NO WARRANTY, to the extent permitted by law.
+You may redistribute copies of GNU Fortran
+under the terms of the GNU General Public License.
+For more information about these matters, see the file named COPYING
+
++ ld -v
+GNU ld (GNU Binutils) 2.24
+
+--> workspacing /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/metadir to /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/meta
+--> workspacing /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb to /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/workspace
+--> Mounting procfs at /proc
+Child Process PID is 61
+--> Mapping 0:0 to root:root within container namespace
+Child Process exited, exit code 0
+`/bin/bash -l -c "# Stop if we hit any errors.
+set -e
+
+# If we're running as \`bash\`, then use the \`DEBUG\` and \`ERR\` traps
+if [ \$(basename \$0) = \"bash\" ]; then
+    trap \"trap - DEBUG INT TERM ERR EXIT; \
+          set +e +x; \
+          auto_install_license; \
+          save_env\" \
+        EXIT
+
+    trap \"RET=\\$?; \
+          trap - DEBUG INT TERM ERR EXIT; \
+          set +e +x; \
+          echo Previous command \\$! exited with \\$RET >&2; \
+          save_srcdir; \
+          save_env; \
+          exit \\$RET\" \
+        INT TERM ERR
+
+    # Swap out srcdir from underneath our feet if we've got our \`ERR\`
+    # traps set; if we don't have this, we get very confused.  :P
+    tmpify_srcdir
+
+    # Start saving everything into our history
+    trap save_history DEBUG
+else
+    # If we're running in \`sh\` or something like that, we need a
+    # slightly slimmer set of traps. :(
+    trap \"RET=\\$?; \
+          echo Previous command exited with \\$RET >&2; \
+          set +e +x; \
+          save_env; \
+          exit \\$RET\" \
+        EXIT INT TERM
+fi
+
+cd \$WORKSPACE/srcdir
+if [[ \${target} == *mingw* ]]; then
+    mv Library/bin \${libdir}
+else
+    mv lib \${libdir}
+fi
+install_license info/*.txt
+
+"`
+verbose sandbox enabled (running in privileged container mode)
+Parsed --rootfs as "/workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs"
+Parsed --cd as "/workspace/srcdir"
+Parsed --workspace as "/workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb" -> "/workspace"
+Parsed --workspace as "/workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/metadir" -> "/meta"
+Parsed --workspace as "/tmp/jl_Dpxtwj" -> "/opt/bin"
+Parsed --workspace as "/storage/ccache" -> "/root/.ccache"
+Parsed --map as "/workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/PlatformSupport-x86_64-linux-gnu.v2019.11.11.x86_64-linux-musl.squashfs" -> "/opt/x86_64-linux-gnu/PlatformSupport-2019.11.11"
+Parsed --map as "/workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/GCCBootstrap-x86_64-linux-gnu.v4.8.5.x86_64-linux-musl.squashfs" -> "/opt/x86_64-linux-gnu/GCCBootstrap-4.8.5"
+Parsed --map as "/workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/LLVMBootstrap.v8.0.0.x86_64-linux-musl.squashfs" -> "/opt/x86_64-linux-musl/LLVMBootstrap-8.0.0"
+Parsed --map as "/workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/PlatformSupport-x86_64-linux-musl.v2019.11.11.x86_64-linux-musl.squashfs" -> "/opt/x86_64-linux-musl/PlatformSupport-2019.11.11"
+Parsed --map as "/workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/GCCBootstrap-x86_64-linux-musl.v4.8.5.x86_64-linux-musl.squashfs" -> "/opt/x86_64-linux-musl/GCCBootstrap-4.8.5"
+--> Creating overlay workdir at /proc
+--> Mounting overlay of /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs at /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs (modifications in /proc/upper/rootfs, workspace in /proc/work/rootfs)
+--> mapping /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/GCCBootstrap-x86_64-linux-musl.v4.8.5.x86_64-linux-musl.squashfs to /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/opt/x86_64-linux-musl/GCCBootstrap-4.8.5
+--> mapping /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/PlatformSupport-x86_64-linux-musl.v2019.11.11.x86_64-linux-musl.squashfs to /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/opt/x86_64-linux-musl/PlatformSupport-2019.11.11
+--> mapping /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/LLVMBootstrap.v8.0.0.x86_64-linux-musl.squashfs to /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/opt/x86_64-linux-musl/LLVMBootstrap-8.0.0
+--> mapping /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/GCCBootstrap-x86_64-linux-gnu.v4.8.5.x86_64-linux-musl.squashfs to /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/opt/x86_64-linux-gnu/GCCBootstrap-4.8.5
+--> mapping /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/PlatformSupport-x86_64-linux-gnu.v2019.11.11.x86_64-linux-musl.squashfs to /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/opt/x86_64-linux-gnu/PlatformSupport-2019.11.11
+--> Mounting overlay of /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/opt/x86_64-linux-gnu/PlatformSupport-2019.11.11:/workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/opt/x86_64-linux-gnu/GCCBootstrap-4.8.5 at /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/opt/x86_64-linux-gnu (modifications in /proc/upper/x86_64-linux-gnu, workspace in /proc/work/x86_64-linux-gnu)
+--> Mounting overlay of /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/opt/x86_64-linux-musl/LLVMBootstrap-8.0.0:/workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/opt/x86_64-linux-musl/PlatformSupport-2019.11.11:/workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/opt/x86_64-linux-musl/GCCBootstrap-4.8.5 at /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/opt/x86_64-linux-musl (modifications in /proc/upper/x86_64-linux-musl, workspace in /proc/work/x86_64-linux-musl)
+--> Mounting procfs at /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/proc
+--> Mounting /dev/null at /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/dev/null
+--> Mounting /dev/tty at /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/dev/tty
+--> Mounting /dev/urandom at /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/dev/urandom
+--> workspacing /storage/ccache to /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/root/.ccache
+--> workspacing /tmp/jl_Dpxtwj to /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/opt/bin
+--> workspacing /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/metadir to /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/meta
+--> workspacing /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb to /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/workspace
+--> Mounting procfs at /proc
+About to run `/bin/bash` `-l` `-c` `# Stop if we hit any errors.
+set -e
+
+# If we're running as `bash`, then use the `DEBUG` and `ERR` traps
+if [ $(basename $0) = "bash" ]; then
+    trap "trap - DEBUG INT TERM ERR EXIT; \
+          set +e +x; \
+          auto_install_license; \
+          save_env" \
+        EXIT
+
+    trap "RET=\$?; \
+          trap - DEBUG INT TERM ERR EXIT; \
+          set +e +x; \
+          echo Previous command \$! exited with \$RET >&2; \
+          save_srcdir; \
+          save_env; \
+          exit \$RET" \
+        INT TERM ERR
+
+    # Swap out srcdir from underneath our feet if we've got our `ERR`
+    # traps set; if we don't have this, we get very confused.  :P
+    tmpify_srcdir
+
+    # Start saving everything into our history
+    trap save_history DEBUG
+else
+    # If we're running in `sh` or something like that, we need a
+    # slightly slimmer set of traps. :(
+    trap "RET=\$?; \
+          echo Previous command exited with \$RET >&2; \
+          set +e +x; \
+          save_env; \
+          exit \$RET" \
+        EXIT INT TERM
+fi
+
+cd $WORKSPACE/srcdir
+if [[ ${target} == *mingw* ]]; then
+    mv Library/bin ${libdir}
+else
+    mv lib ${libdir}
+fi
+install_license info/*.txt
+
+` 
+Copying srcdir to tmpfs...
+ ---> cd $WORKSPACE/srcdir
+ ---> [[ ${target} == *mingw* ]]
+ ---> mv lib ${libdir}
+ ---> install_license info/*.txt
+Installing license file "info/LICENSE.txt" to "/workspace/destdir/share/licenses/IntelOpenMP/LICENSE.txt"...
+ ---> source "$_script"
+
+--> workspacing /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/metadir to /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/meta
+--> workspacing /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb to /workspace/I/IntelOpenMP/build/x86_64-linux-gnu/AyqI2rsb/mounts/Rootfs.v2019.11.22.x86_64-linux-musl.squashfs/workspace
+--> Mounting procfs at /proc
+Child Process PID is 139
+--> Mapping 0:0 to root:root within container namespace
+Child Process exited, exit code 0

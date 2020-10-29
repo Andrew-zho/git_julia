@@ -1,0 +1,348 @@
+[[Sundials]]
+arch = "aarch64"
+git-tree-sha1 = "111e22ff629b409f2be24acde26bfd1fc5d56547"
+libc = "glibc"
+libgfortran_version = "3.0.0"
+os = "linux"
+
+    [[Sundials.download]]
+    sha256 = "c9814cf8b5fb3e03942871b4212337434fa45c9e0cf82e00521acadfe9bd56d3"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.aarch64-linux-gnu-libgfortran3.tar.gz"
+[[Sundials]]
+arch = "aarch64"
+git-tree-sha1 = "bdf5177b48c718c7970efefe1f153479ae59afb7"
+libc = "glibc"
+libgfortran_version = "4.0.0"
+os = "linux"
+
+    [[Sundials.download]]
+    sha256 = "81b920f637cfe75aebf069994df16aa93d7aaa8556d24ff130d20f4453fe64e9"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.aarch64-linux-gnu-libgfortran4.tar.gz"
+[[Sundials]]
+arch = "aarch64"
+git-tree-sha1 = "0e214b56500e0a0a270b5b84b89a59c595ce8f12"
+libc = "glibc"
+libgfortran_version = "5.0.0"
+os = "linux"
+
+    [[Sundials.download]]
+    sha256 = "b0721a81bdc008b83d0bfedbbd3b590b42cd1109d81d33c0c5f4ae4a5b5086f9"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.aarch64-linux-gnu-libgfortran5.tar.gz"
+[[Sundials]]
+arch = "aarch64"
+git-tree-sha1 = "48ca6b5c933a145bff33020f1450dffe0f303cea"
+libc = "musl"
+libgfortran_version = "3.0.0"
+os = "linux"
+
+    [[Sundials.download]]
+    sha256 = "39a386a04cb645ebbab5b2b1ca8c50be76756eaa0d1fa35c6aca79c8f31599a4"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.aarch64-linux-musl-libgfortran3.tar.gz"
+[[Sundials]]
+arch = "aarch64"
+git-tree-sha1 = "68257509f4971148c26a5c84db3103a90a9fda0d"
+libc = "musl"
+libgfortran_version = "4.0.0"
+os = "linux"
+
+    [[Sundials.download]]
+    sha256 = "cd1989b44f52bc739a36228b8e2e5ad87c1f1e91dda5ebc49592bcf58a305581"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.aarch64-linux-musl-libgfortran4.tar.gz"
+[[Sundials]]
+arch = "aarch64"
+git-tree-sha1 = "39cbf5045a51bba0b80673ac2d3a7df7de274a74"
+libc = "musl"
+libgfortran_version = "5.0.0"
+os = "linux"
+
+    [[Sundials.download]]
+    sha256 = "4623a2031e211fe16e73fbd7de5fb4f30e05a880ee3cc1ab7e69ef499c8779a0"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.aarch64-linux-musl-libgfortran5.tar.gz"
+[[Sundials]]
+arch = "armv7l"
+git-tree-sha1 = "75cd5772f42a49ec3b4c0232196dfe822af9c650"
+libc = "glibc"
+libgfortran_version = "3.0.0"
+os = "linux"
+
+    [[Sundials.download]]
+    sha256 = "9ecb43449588abccbdeb6e7733e5459b2a935ff111fdbe04d340767d4df342cf"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.armv7l-linux-gnueabihf-libgfortran3.tar.gz"
+[[Sundials]]
+arch = "armv7l"
+git-tree-sha1 = "db5864afa8c198b889d6d24ca15c20992cfa3e0b"
+libc = "glibc"
+libgfortran_version = "4.0.0"
+os = "linux"
+
+    [[Sundials.download]]
+    sha256 = "9a68b48b4291e04e7f20abea4e1944a578be0b40bb015895cde1538cd114a343"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.armv7l-linux-gnueabihf-libgfortran4.tar.gz"
+[[Sundials]]
+arch = "armv7l"
+git-tree-sha1 = "060138ec6ffd98ca33b90e5a6d058c47c2c6b0e7"
+libc = "glibc"
+libgfortran_version = "5.0.0"
+os = "linux"
+
+    [[Sundials.download]]
+    sha256 = "bbd2da57f56308c585a14f920433b78b7800deda67b0e5a14d29a5f93a64295e"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.armv7l-linux-gnueabihf-libgfortran5.tar.gz"
+[[Sundials]]
+arch = "armv7l"
+git-tree-sha1 = "c62ef5a91f7f6132014a09f46921743f100b4ed5"
+libc = "musl"
+libgfortran_version = "3.0.0"
+os = "linux"
+
+    [[Sundials.download]]
+    sha256 = "64a8448b813b23736111fbc854e279c3305aa0f0be94bf855f4979b5a200422a"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.armv7l-linux-musleabihf-libgfortran3.tar.gz"
+[[Sundials]]
+arch = "armv7l"
+git-tree-sha1 = "65c76567a5a20a40992d4b8aef7d280d1e893770"
+libc = "musl"
+libgfortran_version = "4.0.0"
+os = "linux"
+
+    [[Sundials.download]]
+    sha256 = "17002842734c1da54670c584c326f1286b816765740a38d0599384ff21318f94"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.armv7l-linux-musleabihf-libgfortran4.tar.gz"
+[[Sundials]]
+arch = "armv7l"
+git-tree-sha1 = "9908d06d65b63bf57e641b0270929e70f3c99bf3"
+libc = "musl"
+libgfortran_version = "5.0.0"
+os = "linux"
+
+    [[Sundials.download]]
+    sha256 = "28a67dd9b446e380e2ff11cd8d59f4dda372a0f62d42fda27df8fa16a6484e97"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.armv7l-linux-musleabihf-libgfortran5.tar.gz"
+[[Sundials]]
+arch = "i686"
+git-tree-sha1 = "7fa9fae28d51743ce8220bced5ed5dcecaecb438"
+libc = "glibc"
+libgfortran_version = "3.0.0"
+os = "linux"
+
+    [[Sundials.download]]
+    sha256 = "d8b4cd3768605d2c76dc4af208bbb80279d4b065f21153905a174b21248a3a22"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.i686-linux-gnu-libgfortran3.tar.gz"
+[[Sundials]]
+arch = "i686"
+git-tree-sha1 = "c450e81af7735441fab10e9f42446b44163cc5a3"
+libc = "glibc"
+libgfortran_version = "4.0.0"
+os = "linux"
+
+    [[Sundials.download]]
+    sha256 = "e698791a284a6f8d9e08607e059e3181ddbded913a8fae9b7e5fd29f9db33412"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.i686-linux-gnu-libgfortran4.tar.gz"
+[[Sundials]]
+arch = "i686"
+git-tree-sha1 = "f166b17b7c264b676612e1e1cc7bee2f14155672"
+libc = "glibc"
+libgfortran_version = "5.0.0"
+os = "linux"
+
+    [[Sundials.download]]
+    sha256 = "b40703c5c7d2c58702f9d38cf13babed7a486ce3e36bc891177be0e907e13a11"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.i686-linux-gnu-libgfortran5.tar.gz"
+[[Sundials]]
+arch = "i686"
+git-tree-sha1 = "25c7922c91190f5e010427f2665a25e6428c5980"
+libc = "musl"
+libgfortran_version = "3.0.0"
+os = "linux"
+
+    [[Sundials.download]]
+    sha256 = "55e5f35395152b53ab3d57d3ce4d5521cb93d13e61427c6fd5f874bfa9191192"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.i686-linux-musl-libgfortran3.tar.gz"
+[[Sundials]]
+arch = "i686"
+git-tree-sha1 = "de11a467c0363f04a48dfb70988943962dbf7f91"
+libc = "musl"
+libgfortran_version = "4.0.0"
+os = "linux"
+
+    [[Sundials.download]]
+    sha256 = "8d282e24474b3047e5ea4a7b33c84a6c1b9a4fa30c606d5626eb52bd57277001"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.i686-linux-musl-libgfortran4.tar.gz"
+[[Sundials]]
+arch = "i686"
+git-tree-sha1 = "ec0994ffe71e2f75619e401b143c5edeaeb9decb"
+libc = "musl"
+libgfortran_version = "5.0.0"
+os = "linux"
+
+    [[Sundials.download]]
+    sha256 = "8ca2027731e17926c32fc995fed140f570b75fe7511cc11dc88f62ce63a00217"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.i686-linux-musl-libgfortran5.tar.gz"
+[[Sundials]]
+arch = "i686"
+git-tree-sha1 = "9111080099f57379c26823bbfe729a5ed3d9777a"
+libgfortran_version = "3.0.0"
+os = "windows"
+
+    [[Sundials.download]]
+    sha256 = "ce3dfc43c8c64dc5c8db8ccfe85ed0125d25772cdde801c09117928ad7082695"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.i686-w64-mingw32-libgfortran3.tar.gz"
+[[Sundials]]
+arch = "i686"
+git-tree-sha1 = "7943948e0c5c213c5b782a7fd63305578f45fd1b"
+libgfortran_version = "4.0.0"
+os = "windows"
+
+    [[Sundials.download]]
+    sha256 = "699b695c5192f0179f17f9960a380dd9ccecd465218f93dcb075843e1d04b791"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.i686-w64-mingw32-libgfortran4.tar.gz"
+[[Sundials]]
+arch = "i686"
+git-tree-sha1 = "f43f53750d9b7c10b3b3f6da5c83ea35451cf545"
+libgfortran_version = "5.0.0"
+os = "windows"
+
+    [[Sundials.download]]
+    sha256 = "05a7eb2f6db2da5d724a8c2db8de1194d8f4c299df36199b35d96ec7086fb0b0"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.i686-w64-mingw32-libgfortran5.tar.gz"
+[[Sundials]]
+arch = "x86_64"
+git-tree-sha1 = "05cd515f78c926d2db0040d59fff77627862f7e7"
+libgfortran_version = "3.0.0"
+os = "macos"
+
+    [[Sundials.download]]
+    sha256 = "3c87c57164b7bbdfe6dd5f758b13ca837273491e3e18fb5a47f84d88277b94cd"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.x86_64-apple-darwin14-libgfortran3.tar.gz"
+[[Sundials]]
+arch = "x86_64"
+git-tree-sha1 = "918d6873b98539ec49ade0974f120b83ed3a577f"
+libgfortran_version = "4.0.0"
+os = "macos"
+
+    [[Sundials.download]]
+    sha256 = "95feaf1efc135019907b6a87e014be29b559509f09198c593e30b8d0f1fe9537"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.x86_64-apple-darwin14-libgfortran4.tar.gz"
+[[Sundials]]
+arch = "x86_64"
+git-tree-sha1 = "bd8ae81b8657ac029ad0b2592aaba09a79121a96"
+libgfortran_version = "5.0.0"
+os = "macos"
+
+    [[Sundials.download]]
+    sha256 = "90ddc603280dc12eb4586f1c4ae319839c36ddcab341509445f69474fb091c59"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.x86_64-apple-darwin14-libgfortran5.tar.gz"
+[[Sundials]]
+arch = "x86_64"
+git-tree-sha1 = "369fd1eaa3e67fbdc8eaf550ab1820e45f00a40b"
+libc = "glibc"
+libgfortran_version = "3.0.0"
+os = "linux"
+
+    [[Sundials.download]]
+    sha256 = "3d2904e4167d3cb9d6879642ed966b7cb0327fbcf08ec1911b3e625bd8cc1074"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.x86_64-linux-gnu-libgfortran3.tar.gz"
+[[Sundials]]
+arch = "x86_64"
+git-tree-sha1 = "83b809e41c8e9a9ef35ad0c684b86a08d6e74c95"
+libc = "glibc"
+libgfortran_version = "4.0.0"
+os = "linux"
+
+    [[Sundials.download]]
+    sha256 = "a2431f236892cf0cbde52547294aa5a5bcd86dc13ca85395397ec90905dcbfd4"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.x86_64-linux-gnu-libgfortran4.tar.gz"
+[[Sundials]]
+arch = "x86_64"
+git-tree-sha1 = "9188a0e465a5f00b41a8656ee0e5389ff2f4fa45"
+libc = "glibc"
+libgfortran_version = "5.0.0"
+os = "linux"
+
+    [[Sundials.download]]
+    sha256 = "27fc96ba2bab34798db71bc3d8f5e2eb8cd881260ad78b0272f744ab71d17b86"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.x86_64-linux-gnu-libgfortran5.tar.gz"
+[[Sundials]]
+arch = "x86_64"
+git-tree-sha1 = "693a1e2a7c61578a21598e7f757597de0c0dea5a"
+libc = "musl"
+libgfortran_version = "3.0.0"
+os = "linux"
+
+    [[Sundials.download]]
+    sha256 = "6bace0829f5804be06505686b7d4796c61957aa768d3fd7b60e51a90564a4043"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.x86_64-linux-musl-libgfortran3.tar.gz"
+[[Sundials]]
+arch = "x86_64"
+git-tree-sha1 = "c628ca68886a6650a521f5823c3691e6930316ab"
+libc = "musl"
+libgfortran_version = "4.0.0"
+os = "linux"
+
+    [[Sundials.download]]
+    sha256 = "6a54b0674dd2fdb6b72a1633f75fcf7c5bc793307a64eab56a79fb345c88aec0"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.x86_64-linux-musl-libgfortran4.tar.gz"
+[[Sundials]]
+arch = "x86_64"
+git-tree-sha1 = "f81a858ceb69a9b07e3848219caa496b0790f20b"
+libc = "musl"
+libgfortran_version = "5.0.0"
+os = "linux"
+
+    [[Sundials.download]]
+    sha256 = "423760fe57d9137139526efd545b6657b164063b46466d921a581df41c347b27"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.x86_64-linux-musl-libgfortran5.tar.gz"
+[[Sundials]]
+arch = "x86_64"
+git-tree-sha1 = "2c7a76b11c29222ead679936f2e1d256f2e8589d"
+libgfortran_version = "3.0.0"
+os = "freebsd"
+
+    [[Sundials.download]]
+    sha256 = "2a2806833cfe3e6cc2cfe909e935b5012ac6009fbe43bbadc5b88f22433a3cee"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.x86_64-unknown-freebsd11.1-libgfortran3.tar.gz"
+[[Sundials]]
+arch = "x86_64"
+git-tree-sha1 = "a45725f00eafdcca276b58c8f9df932bce1fe82e"
+libgfortran_version = "4.0.0"
+os = "freebsd"
+
+    [[Sundials.download]]
+    sha256 = "ef871dc168cc077dc07772db14d48eccfea57cd95f75f81c6d52c43f1d0feb51"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.x86_64-unknown-freebsd11.1-libgfortran4.tar.gz"
+[[Sundials]]
+arch = "x86_64"
+git-tree-sha1 = "b4e7bffaacf04594debb73b0d83fcbb13a1b1f9e"
+libgfortran_version = "5.0.0"
+os = "freebsd"
+
+    [[Sundials.download]]
+    sha256 = "ee5b75cc728902e0e8adb21388d1371160f124f0833f39a466923845f5cdaba0"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.x86_64-unknown-freebsd11.1-libgfortran5.tar.gz"
+[[Sundials]]
+arch = "x86_64"
+git-tree-sha1 = "19694748ec3551e6fcfe8451b261ff6a7ea3b96a"
+libgfortran_version = "3.0.0"
+os = "windows"
+
+    [[Sundials.download]]
+    sha256 = "60ff528b1c8fa7f4cbe4a0b92b57123d8816034e575588112907af2d6521881f"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.x86_64-w64-mingw32-libgfortran3.tar.gz"
+[[Sundials]]
+arch = "x86_64"
+git-tree-sha1 = "8c9fa52295d336c71cf388cbf86369926d8bd93f"
+libgfortran_version = "4.0.0"
+os = "windows"
+
+    [[Sundials.download]]
+    sha256 = "26ee17ef58e569f976cddb9965126afa230cddc26cc361387e5376668640ef68"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.x86_64-w64-mingw32-libgfortran4.tar.gz"
+[[Sundials]]
+arch = "x86_64"
+git-tree-sha1 = "bd2f3b3f3e5afe0c9a31adc2cad7d509222bc7aa"
+libgfortran_version = "5.0.0"
+os = "windows"
+
+    [[Sundials.download]]
+    sha256 = "d8ab7bbd55a7467031c2cdfd42b535383be017017a2ab4cf3204aaa2b01a36f0"
+    url = "https://github.com/JuliaBinaryWrappers/Sundials_jll.jl/releases/download/Sundials-v5.2.0+1/Sundials.v5.2.0.x86_64-w64-mingw32-libgfortran5.tar.gz"

@@ -1,0 +1,758 @@
+BinaryBuilder.jl version: 0.2.4-tree-160cb2f715
+
+`/bin/bash -l -c 'set -x
+cc --version
+c++ --version
+gcc --version
+g++ --version
+clang --version
+clang++ --version
+objc --version
+f77 --version
+gfortran --version
+ld -v
+'`
+verbose sandbox enabled (running in privileged container mode)
+Parsed --rootfs as "/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b"
+Parsed --cd as "/workspace/srcdir"
+Parsed --workspace as "/agent/_work/1/s/C/CompilerSupportLibraries/build/x86_64-linux-gnu-libgfortran4/oUf7ZNLM" -> "/workspace"
+Parsed --workspace as "/agent/_work/1/s/C/CompilerSupportLibraries/build/x86_64-linux-gnu-libgfortran4/oUf7ZNLM/metadir" -> "/meta"
+Parsed --workspace as "/tmp/jl_US40Cl" -> "/opt/bin"
+Parsed --workspace as "/depot/ccache" -> "/root/.ccache"
+Parsed --map as "/depot/artifacts/b38aa971fdf60ce04b3a0c7c715f78268a7e3a7e" -> "/opt/x86_64-linux-gnu/PlatformSupport-2020.2.7"
+Parsed --map as "/depot/artifacts/bb56860a9673a97ec929fd8eb44b6d1e0ddc7f70" -> "/opt/x86_64-linux-gnu/GCCBootstrap-7.1.0"
+Parsed --map as "/depot/artifacts/35dc5ddb1b3037f449fee5771b6c12ebcc4350b8" -> "/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1"
+Parsed --map as "/depot/artifacts/1a9bb425a2d8d6e56e4b68078e9d74e228daad18" -> "/opt/x86_64-linux-musl/PlatformSupport-2020.2.7"
+Parsed --map as "/depot/artifacts/bf43203b1d652e7683f4a6a950a58833aea7233b" -> "/opt/x86_64-linux-musl/GCCBootstrap-7.1.0"
+--> Creating overlay workdir at /proc
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b (modifications in /proc/upper/rootfs, workspace in /proc/work/rootfs)
+--> mapping /depot/artifacts/bf43203b1d652e7683f4a6a950a58833aea7233b to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/GCCBootstrap-7.1.0
+--> mapping /depot/artifacts/1a9bb425a2d8d6e56e4b68078e9d74e228daad18 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/PlatformSupport-2020.2.7
+--> mapping /depot/artifacts/35dc5ddb1b3037f449fee5771b6c12ebcc4350b8 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1
+--> mapping /depot/artifacts/bb56860a9673a97ec929fd8eb44b6d1e0ddc7f70 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-gnu/GCCBootstrap-7.1.0
+--> mapping /depot/artifacts/b38aa971fdf60ce04b3a0c7c715f78268a7e3a7e to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-gnu/PlatformSupport-2020.2.7
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-gnu/PlatformSupport-2020.2.7:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-gnu/GCCBootstrap-7.1.0 at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-gnu (modifications in /proc/upper/x86_64-linux-gnu, workspace in /proc/work/x86_64-linux-gnu)
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/PlatformSupport-2020.2.7:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/GCCBootstrap-7.1.0 at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl (modifications in /proc/upper/x86_64-linux-musl, workspace in /proc/work/x86_64-linux-musl)
+--> Mounting procfs at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/proc
+--> Mounting /dev/null at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/null
+--> Mounting /dev/tty at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/tty
+--> Mounting /dev/urandom at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/urandom
+--> workspacing /depot/ccache to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/root/.ccache
+--> workspacing /tmp/jl_US40Cl to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/bin
+--> workspacing /agent/_work/1/s/C/CompilerSupportLibraries/build/x86_64-linux-gnu-libgfortran4/oUf7ZNLM/metadir to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/meta
+--> workspacing /agent/_work/1/s/C/CompilerSupportLibraries/build/x86_64-linux-gnu-libgfortran4/oUf7ZNLM to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/workspace
+--> Mounting procfs at /proc
+Child Process PID is 7565
+--> Mapping 0:0 to root:root within container namespace
+--> Mounting procfs at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/proc
+About to run `/bin/bash` `-l` `-c` `set -x
+cc --version
+c++ --version
+gcc --version
+g++ --version
+clang --version
+clang++ --version
+objc --version
+f77 --version
+gfortran --version
+ld -v
+` 
++ cc --version
+x86_64-linux-gnu-gcc (GCC) 7.1.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
++ c++ --version
+x86_64-linux-gnu-g++ (GCC) 7.1.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
++ gcc --version
+x86_64-linux-gnu-gcc (GCC) 7.1.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
++ g++ --version
+x86_64-linux-gnu-g++ (GCC) 7.1.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
++ clang --version
+clang version 9.0.1 (/home/staticfloat/.julia/dev/BinaryBuilder/deps/downloads/llvm-project.git c1a0a213378a458fbea1a5c77b315c7dce08fd05)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /opt/x86_64-linux-musl/bin
++ clang++ --version
+clang version 9.0.1 (/home/staticfloat/.julia/dev/BinaryBuilder/deps/downloads/llvm-project.git c1a0a213378a458fbea1a5c77b315c7dce08fd05)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /opt/x86_64-linux-musl/bin
++ objc --version
+clang version 9.0.1 (/home/staticfloat/.julia/dev/BinaryBuilder/deps/downloads/llvm-project.git c1a0a213378a458fbea1a5c77b315c7dce08fd05)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /opt/x86_64-linux-musl/bin
++ f77 --version
+GNU Fortran (GCC) 7.1.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
++ gfortran --version
+GNU Fortran (GCC) 7.1.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
++ ld -v
+GNU ld (GNU Binutils) 2.27
+Child Process exited, exit code 0
+`/bin/bash -l -c "# Stop if we hit any errors.
+set -e
+
+# If we're running as \`bash\`, then use the \`DEBUG\` and \`ERR\` traps
+if [ \$(basename \$0) = \"bash\" ]; then
+    trap \"trap - DEBUG INT TERM ERR EXIT; \
+          set +e +x; \
+          auto_install_license; \
+          save_env\" \
+        EXIT
+
+    trap \"RET=\\$?; \
+          trap - DEBUG INT TERM ERR EXIT; \
+          set +e +x; \
+          echo Previous command \\$! exited with \\$RET >&2; \
+          save_env; \
+          exit \\$RET\" \
+        INT TERM ERR
+
+    # Start saving everything into our history
+    trap save_history DEBUG
+else
+    # If we're running in \`sh\` or something like that, we need a
+    # slightly slimmer set of traps. :(
+    trap \"RET=\\$?; \
+          echo Previous command exited with \\$RET >&2; \
+          set +e +x; \
+          save_env; \
+          exit \\$RET\" \
+        EXIT INT TERM
+fi
+
+# Start by extracting LatestLibraries
+tar -zxvf \${WORKSPACE}/srcdir/LatestLibraries*.tar.gz -C \${prefix}
+
+echo ***********************************************************
+echo LatestLibraries logs, reproduced here for debuggability:
+cat \${prefix}/logs/LatestLibraries.log
+echo ***********************************************************
+rm -f \${prefix}/logs/LatestLibraries.log
+
+# Make sure expansions aren't empty
+shopt -s nullglob
+
+# copy out all the libraries we can find, not clobbering stuff from LL
+for d in /opt/\${target}/\${target}/lib*; do
+    cp -uav \${d}/*.\${dlext}* \${libdir}/ || true
+done
+
+# libwinpthread is a special snowflake and is only within \`bin\` for some reason
+if [[ \${target} == *mingw* ]]; then
+	cp -uav /opt/\${target}/\${target}/sys-root/bin/*.\${dlext}* \${libdir}/
+fi
+
+# Delete .a and .py files, we don't want those.
+rm -f \${libdir}/*.a \${libdir}/*.py
+
+# Delete any \`.so\` files that are not ELF files, since they're mostly likely linker scripts
+for f in \${libdir}/*.so; do
+    if [[ \"\$(file -b \"\$f\")\" != ELF* ]]; then
+        rm -f \"\$f\"
+    fi
+done
+
+# change permissions so that rpath succeeds
+for l in \${libdir}/*; do
+    chmod 0755 \"\${l}\"
+done
+
+# libgcc_s.1.dylib receives special treatment for now
+if [[ \${target} == *apple* ]]; then
+    install_name_tool -id @rpath/libgcc_s.1.dylib \${libdir}/libgcc_s.1.dylib
+fi
+
+# Install license (we license these all as GPL3, since they're from GCC)
+install_license /usr/share/licenses/GPL3
+
+"`
+verbose sandbox enabled (running in privileged container mode)
+Parsed --rootfs as "/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b"
+Parsed --cd as "/workspace/srcdir"
+Parsed --workspace as "/agent/_work/1/s/C/CompilerSupportLibraries/build/x86_64-linux-gnu-libgfortran4/oUf7ZNLM" -> "/workspace"
+Parsed --workspace as "/agent/_work/1/s/C/CompilerSupportLibraries/build/x86_64-linux-gnu-libgfortran4/oUf7ZNLM/metadir" -> "/meta"
+Parsed --workspace as "/tmp/jl_US40Cl" -> "/opt/bin"
+Parsed --workspace as "/depot/ccache" -> "/root/.ccache"
+Parsed --map as "/depot/artifacts/b38aa971fdf60ce04b3a0c7c715f78268a7e3a7e" -> "/opt/x86_64-linux-gnu/PlatformSupport-2020.2.7"
+Parsed --map as "/depot/artifacts/bb56860a9673a97ec929fd8eb44b6d1e0ddc7f70" -> "/opt/x86_64-linux-gnu/GCCBootstrap-7.1.0"
+Parsed --map as "/depot/artifacts/35dc5ddb1b3037f449fee5771b6c12ebcc4350b8" -> "/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1"
+Parsed --map as "/depot/artifacts/1a9bb425a2d8d6e56e4b68078e9d74e228daad18" -> "/opt/x86_64-linux-musl/PlatformSupport-2020.2.7"
+Parsed --map as "/depot/artifacts/bf43203b1d652e7683f4a6a950a58833aea7233b" -> "/opt/x86_64-linux-musl/GCCBootstrap-7.1.0"
+--> Creating overlay workdir at /proc
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b (modifications in /proc/upper/rootfs, workspace in /proc/work/rootfs)
+--> mapping /depot/artifacts/bf43203b1d652e7683f4a6a950a58833aea7233b to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/GCCBootstrap-7.1.0
+--> mapping /depot/artifacts/1a9bb425a2d8d6e56e4b68078e9d74e228daad18 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/PlatformSupport-2020.2.7
+--> mapping /depot/artifacts/35dc5ddb1b3037f449fee5771b6c12ebcc4350b8 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1
+--> mapping /depot/artifacts/bb56860a9673a97ec929fd8eb44b6d1e0ddc7f70 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-gnu/GCCBootstrap-7.1.0
+--> mapping /depot/artifacts/b38aa971fdf60ce04b3a0c7c715f78268a7e3a7e to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-gnu/PlatformSupport-2020.2.7
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-gnu/PlatformSupport-2020.2.7:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-gnu/GCCBootstrap-7.1.0 at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-gnu (modifications in /proc/upper/x86_64-linux-gnu, workspace in /proc/work/x86_64-linux-gnu)
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/PlatformSupport-2020.2.7:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/GCCBootstrap-7.1.0 at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl (modifications in /proc/upper/x86_64-linux-musl, workspace in /proc/work/x86_64-linux-musl)
+--> Mounting procfs at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/proc
+--> Mounting /dev/null at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/null
+--> Mounting /dev/tty at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/tty
+--> Mounting /dev/urandom at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/urandom
+--> workspacing /depot/ccache to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/root/.ccache
+--> workspacing /tmp/jl_US40Cl to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/bin
+--> workspacing /agent/_work/1/s/C/CompilerSupportLibraries/build/x86_64-linux-gnu-libgfortran4/oUf7ZNLM/metadir to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/meta
+--> workspacing /agent/_work/1/s/C/CompilerSupportLibraries/build/x86_64-linux-gnu-libgfortran4/oUf7ZNLM to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/workspace
+--> Mounting procfs at /proc
+Child Process PID is 7625
+--> Mapping 0:0 to root:root within container namespace
+--> Mounting procfs at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/proc
+About to run `/bin/bash` `-l` `-c` `# Stop if we hit any errors.
+set -e
+
+# If we're running as `bash`, then use the `DEBUG` and `ERR` traps
+if [ $(basename $0) = "bash" ]; then
+    trap "trap - DEBUG INT TERM ERR EXIT; \
+          set +e +x; \
+          auto_install_license; \
+          save_env" \
+        EXIT
+
+    trap "RET=\$?; \
+          trap - DEBUG INT TERM ERR EXIT; \
+          set +e +x; \
+          echo Previous command \$! exited with \$RET >&2; \
+          save_env; \
+          exit \$RET" \
+        INT TERM ERR
+
+    # Start saving everything into our history
+    trap save_history DEBUG
+else
+    # If we're running in `sh` or something like that, we need a
+    # slightly slimmer set of traps. :(
+    trap "RET=\$?; \
+          echo Previous command exited with \$RET >&2; \
+          set +e +x; \
+          save_env; \
+          exit \$RET" \
+        EXIT INT TERM
+fi
+
+# Start by extracting LatestLibraries
+tar -zxvf ${WORKSPACE}/srcdir/LatestLibraries*.tar.gz -C ${prefix}
+
+echo ***********************************************************
+echo LatestLibraries logs, reproduced here for debuggability:
+cat ${prefix}/logs/LatestLibraries.log
+echo ***********************************************************
+rm -f ${prefix}/logs/LatestLibraries.log
+
+# Make sure expansions aren't empty
+shopt -s nullglob
+
+# copy out all the libraries we can find, not clobbering stuff from LL
+for d in /opt/${target}/${target}/lib*; do
+    cp -uav ${d}/*.${dlext}* ${libdir}/ || true
+done
+
+# libwinpthread is a special snowflake and is only within `bin` for some reason
+if [[ ${target} == *mingw* ]]; then
+	cp -uav /opt/${target}/${target}/sys-root/bin/*.${dlext}* ${libdir}/
+fi
+
+# Delete .a and .py files, we don't want those.
+rm -f ${libdir}/*.a ${libdir}/*.py
+
+# Delete any `.so` files that are not ELF files, since they're mostly likely linker scripts
+for f in ${libdir}/*.so; do
+    if [[ "$(file -b "$f")" != ELF* ]]; then
+        rm -f "$f"
+    fi
+done
+
+# change permissions so that rpath succeeds
+for l in ${libdir}/*; do
+    chmod 0755 "${l}"
+done
+
+# libgcc_s.1.dylib receives special treatment for now
+if [[ ${target} == *apple* ]]; then
+    install_name_tool -id @rpath/libgcc_s.1.dylib ${libdir}/libgcc_s.1.dylib
+fi
+
+# Install license (we license these all as GPL3, since they're from GCC)
+install_license /usr/share/licenses/GPL3
+
+` 
+ ---> tar -zxvf ${WORKSPACE}/srcdir/LatestLibraries*.tar.gz -C ${prefix}
+./
+./lib/
+./lib/libgomp.so
+./lib/libgomp.so.1
+./lib/libgomp.so.1.0.0
+./lib/libstdc++.so
+./lib/libstdc++.so.6
+./lib/libstdc++.so.6.0.26
+./logs/
+./logs/LatestLibraries.log
+ ---> echo ***********************************************************
+LatestLibraries.v0.3.3.x86_64-linux-gnu.tar.gz
+ ---> echo LatestLibraries logs, reproduced here for debuggability:
+LatestLibraries logs, reproduced here for debuggability:
+ ---> cat ${prefix}/logs/LatestLibraries.log
+BinaryBuilder.jl version: 0.2.4-tree-160cb2f715
+
+`/bin/bash -l -c 'set -x
+cc --version
+c++ --version
+gcc --version
+g++ --version
+clang --version
+clang++ --version
+objc --version
+f77 --version
+gfortran --version
+ld -v
+'`
+x86_64-linux-gnu-gcc (GCC) 9.1.0
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+x86_64-linux-gnu-g++ (GCC) 9.1.0
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+x86_64-linux-gnu-gcc (GCC) 9.1.0
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+x86_64-linux-gnu-g++ (GCC) 9.1.0
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+verbose sandbox enabled (running in privileged container mode)
+Parsed --rootfs as "/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b"
+Parsed --cd as "/workspace/srcdir"
+Parsed --workspace as "/agent/_work/1/s/C/CompilerSupportLibraries/build/extraction/build/x86_64-linux-gnu/V4kSGp6V" -> "/workspace"
+Parsed --workspace as "/agent/_work/1/s/C/CompilerSupportLibraries/build/extraction/build/x86_64-linux-gnu/V4kSGp6V/metadir" -> "/meta"
+Parsed --workspace as "/tmp/jl_c1n2Ot" -> "/opt/bin"
+Parsed --workspace as "/depot/ccache" -> "/root/.ccache"
+Parsed --map as "/depot/artifacts/b38aa971fdf60ce04b3a0c7c715f78268a7e3a7e" -> "/opt/x86_64-linux-gnu/PlatformSupport-2020.2.7"
+Parsed --map as "/depot/artifacts/cd15fe4af9ce1509125c1f5900bc94b834185cc5" -> "/opt/x86_64-linux-gnu/GCCBootstrap-9.1.0"
+Parsed --map as "/depot/artifacts/35dc5ddb1b3037f449fee5771b6c12ebcc4350b8" -> "/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1"
+Parsed --map as "/depot/artifacts/1a9bb425a2d8d6e56e4b68078e9d74e228daad18" -> "/opt/x86_64-linux-musl/PlatformSupport-2020.2.7"
+Parsed --map as "/depot/artifacts/53f47093da1e994a996a28ec1fc7fefa62452699" -> "/opt/x86_64-linux-musl/GCCBootstrap-9.1.0"
+--> Creating overlay workdir at /proc
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b (modifications in /proc/upper/rootfs, workspace in /proc/work/rootfs)
+--> mapping /depot/artifacts/53f47093da1e994a996a28ec1fc7fefa62452699 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/GCCBootstrap-9.1.0
+--> mapping /depot/artifacts/1a9bb425a2d8d6e56e4b68078e9d74e228daad18 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/PlatformSupport-2020.2.7
+--> mapping /depot/artifacts/35dc5ddb1b3037f449fee5771b6c12ebcc4350b8 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1
+--> mapping /depot/artifacts/cd15fe4af9ce1509125c1f5900bc94b834185cc5 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-gnu/GCCBootstrap-9.1.0
+--> mapping /depot/artifacts/b38aa971fdf60ce04b3a0c7c715f78268a7e3a7e to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-gnu/PlatformSupport-2020.2.7
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-gnu/PlatformSupport-2020.2.7:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-gnu/GCCBootstrap-9.1.0 at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-gnu (modifications in /proc/upper/x86_64-linux-gnu, workspace in /proc/work/x86_64-linux-gnu)
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/PlatformSupport-2020.2.7:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/GCCBootstrap-9.1.0 at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl (modifications in /proc/upper/x86_64-linux-musl, workspace in /proc/work/x86_64-linux-musl)
+--> Mounting procfs at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/proc
+--> Mounting /dev/null at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/null
+--> Mounting /dev/tty at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/tty
+--> Mounting /dev/urandom at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/urandom
+--> workspacing /depot/ccache to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/root/.ccache
+--> workspacing /tmp/jl_c1n2Ot to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/bin
+--> workspacing /agent/_work/1/s/C/CompilerSupportLibraries/build/extraction/build/x86_64-linux-gnu/V4kSGp6V/metadir to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/meta
+--> workspacing /agent/_work/1/s/C/CompilerSupportLibraries/build/extraction/build/x86_64-linux-gnu/V4kSGp6V to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/workspace
+--> Mounting procfs at /proc
+Child Process PID is 7389
+--> Mapping 0:0 to root:root within container namespace
+--> Mounting procfs at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/proc
+About to run `/bin/bash` `-l` `-c` `set -x
+cc --version
+c++ --version
+gcc --version
+g++ --version
+clang --version
+clang++ --version
+objc --version
+f77 --version
+gfortran --version
+ld -v
+` 
++ cc --version
++ c++ --version
++ gcc --version
++ g++ --version
++ clang --version
+clang version 9.0.1 (/home/staticfloat/.julia/dev/BinaryBuilder/deps/downloads/llvm-project.git c1a0a213378a458fbea1a5c77b315c7dce08fd05)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /opt/x86_64-linux-musl/bin
++ clang++ --version
+clang version 9.0.1 (/home/staticfloat/.julia/dev/BinaryBuilder/deps/downloads/llvm-project.git c1a0a213378a458fbea1a5c77b315c7dce08fd05)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /opt/x86_64-linux-musl/bin
++ objc --version
+clang version 9.0.1 (/home/staticfloat/.julia/dev/BinaryBuilder/deps/downloads/llvm-project.git c1a0a213378a458fbea1a5c77b315c7dce08fd05)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /opt/x86_64-linux-musl/bin
++ f77 --version
+GNU Fortran (GCC) 9.1.0
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
++ gfortran --version
+GNU Fortran (GCC) 9.1.0
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
++ ld -v
+GNU ld (GNU Binutils) 2.33.1
+Child Process exited, exit code 0
+`/bin/bash -l -c "# Stop if we hit any errors.
+set -e
+
+# If we're running as \`bash\`, then use the \`DEBUG\` and \`ERR\` traps
+if [ \$(basename \$0) = \"bash\" ]; then
+    trap \"trap - DEBUG INT TERM ERR EXIT; \
+          set +e +x; \
+          auto_install_license; \
+          save_env\" \
+        EXIT
+
+    trap \"RET=\\$?; \
+          trap - DEBUG INT TERM ERR EXIT; \
+          set +e +x; \
+          echo Previous command \\$! exited with \\$RET >&2; \
+          save_env; \
+          exit \\$RET\" \
+        INT TERM ERR
+
+    # Start saving everything into our history
+    trap save_history DEBUG
+else
+    # If we're running in \`sh\` or something like that, we need a
+    # slightly slimmer set of traps. :(
+    trap \"RET=\\$?; \
+          echo Previous command exited with \\$RET >&2; \
+          set +e +x; \
+          save_env; \
+          exit \\$RET\" \
+        EXIT INT TERM
+fi
+
+mkdir -p \${libdir}
+for d in /opt/\${target}/\${target}/lib*; do
+    # Copy all the libstdc++ and libgomp files:
+    cp -av \${d}/libstdc++*.\${dlext}* \${libdir} || true
+    cp -av \${d}/libgomp*.\${dlext}* \${libdir} || true
+    # Don't copy \`.a\` or \`.py\` files.  >:[
+    rm -f \${libdir}/*.a \${libdir}/*.py
+done
+
+"`
+verbose sandbox enabled (running in privileged container mode)
+Parsed --rootfs as "/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b"
+Parsed --cd as "/workspace/srcdir"
+Parsed --workspace as "/agent/_work/1/s/C/CompilerSupportLibraries/build/extraction/build/x86_64-linux-gnu/V4kSGp6V" -> "/workspace"
+Parsed --workspace as "/agent/_work/1/s/C/CompilerSupportLibraries/build/extraction/build/x86_64-linux-gnu/V4kSGp6V/metadir" -> "/meta"
+Parsed --workspace as "/tmp/jl_c1n2Ot" -> "/opt/bin"
+Parsed --workspace as "/depot/ccache" -> "/root/.ccache"
+Parsed --map as "/depot/artifacts/b38aa971fdf60ce04b3a0c7c715f78268a7e3a7e" -> "/opt/x86_64-linux-gnu/PlatformSupport-2020.2.7"
+Parsed --map as "/depot/artifacts/cd15fe4af9ce1509125c1f5900bc94b834185cc5" -> "/opt/x86_64-linux-gnu/GCCBootstrap-9.1.0"
+Parsed --map as "/depot/artifacts/35dc5ddb1b3037f449fee5771b6c12ebcc4350b8" -> "/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1"
+Parsed --map as "/depot/artifacts/1a9bb425a2d8d6e56e4b68078e9d74e228daad18" -> "/opt/x86_64-linux-musl/PlatformSupport-2020.2.7"
+Parsed --map as "/depot/artifacts/53f47093da1e994a996a28ec1fc7fefa62452699" -> "/opt/x86_64-linux-musl/GCCBootstrap-9.1.0"
+--> Creating overlay workdir at /proc
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b (modifications in /proc/upper/rootfs, workspace in /proc/work/rootfs)
+--> mapping /depot/artifacts/53f47093da1e994a996a28ec1fc7fefa62452699 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/GCCBootstrap-9.1.0
+--> mapping /depot/artifacts/1a9bb425a2d8d6e56e4b68078e9d74e228daad18 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/PlatformSupport-2020.2.7
+--> mapping /depot/artifacts/35dc5ddb1b3037f449fee5771b6c12ebcc4350b8 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1
+--> mapping /depot/artifacts/cd15fe4af9ce1509125c1f5900bc94b834185cc5 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-gnu/GCCBootstrap-9.1.0
+--> mapping /depot/artifacts/b38aa971fdf60ce04b3a0c7c715f78268a7e3a7e to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-gnu/PlatformSupport-2020.2.7
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-gnu/PlatformSupport-2020.2.7:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-gnu/GCCBootstrap-9.1.0 at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-gnu (modifications in /proc/upper/x86_64-linux-gnu, workspace in /proc/work/x86_64-linux-gnu)
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/PlatformSupport-2020.2.7:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/GCCBootstrap-9.1.0 at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl (modifications in /proc/upper/x86_64-linux-musl, workspace in /proc/work/x86_64-linux-musl)
+--> Mounting procfs at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/proc
+--> Mounting /dev/null at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/null
+--> Mounting /dev/tty at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/tty
+--> Mounting /dev/urandom at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/urandom
+--> workspacing /depot/ccache to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/root/.ccache
+--> workspacing /tmp/jl_c1n2Ot to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/bin
+--> workspacing /agent/_work/1/s/C/CompilerSupportLibraries/build/extraction/build/x86_64-linux-gnu/V4kSGp6V/metadir to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/meta
+--> workspacing /agent/_work/1/s/C/CompilerSupportLibraries/build/extraction/build/x86_64-linux-gnu/V4kSGp6V to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/workspace
+--> Mounting procfs at /proc
+Child Process PID is 7449
+--> Mapping 0:0 to root:root within container namespace
+--> Mounting procfs at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/proc
+About to run `/bin/bash` `-l` `-c` `# Stop if we hit any errors.
+set -e
+
+# If we're running as `bash`, then use the `DEBUG` and `ERR` traps
+if [ $(basename $0) = "bash" ]; then
+    trap "trap - DEBUG INT TERM ERR EXIT; \
+          set +e +x; \
+          auto_install_license; \
+          save_env" \
+        EXIT
+
+    trap "RET=\$?; \
+          trap - DEBUG INT TERM ERR EXIT; \
+          set +e +x; \
+          echo Previous command \$! exited with \$RET >&2; \
+          save_env; \
+          exit \$RET" \
+        INT TERM ERR
+
+    # Start saving everything into our history
+    trap save_history DEBUG
+else
+    # If we're running in `sh` or something like that, we need a
+    # slightly slimmer set of traps. :(
+    trap "RET=\$?; \
+          echo Previous command exited with \$RET >&2; \
+          set +e +x; \
+          save_env; \
+          exit \$RET" \
+        EXIT INT TERM
+fi
+
+mkdir -p ${libdir}
+for d in /opt/${target}/${target}/lib*; do
+    # Copy all the libstdc++ and libgomp files:
+    cp -av ${d}/libstdc++*.${dlext}* ${libdir} || true
+    cp -av ${d}/libgomp*.${dlext}* ${libdir} || true
+    # Don't copy `.a` or `.py` files.  >:[
+    rm -f ${libdir}/*.a ${libdir}/*.py
+done
+
+` 
+ ---> mkdir -p ${libdir}
+ ---> for d in /opt/${target}/${target}/lib*
+ ---> cp -av ${d}/libstdc++*.${dlext}* ${libdir}
+cp: can't stat '/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib/libstdc++*.so*': No such file or directory
+ ---> true
+ ---> cp -av ${d}/libgomp*.${dlext}* ${libdir}
+cp: can't stat '/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib/libgomp*.so*': No such file or directory
+ ---> true
+ ---> rm -f ${libdir}/*.a ${libdir}/*.py
+ ---> for d in /opt/${target}/${target}/lib*
+ ---> cp -av ${d}/libstdc++*.${dlext}* ${libdir}
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libstdc++.so' -> '/workspace/destdir/lib/libstdc++.so'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libstdc++.so.6' -> '/workspace/destdir/lib/libstdc++.so.6'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libstdc++.so.6.0.26' -> '/workspace/destdir/lib/libstdc++.so.6.0.26'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libstdc++.so.6.0.26-gdb.py' -> '/workspace/destdir/lib/libstdc++.so.6.0.26-gdb.py'
+ ---> cp -av ${d}/libgomp*.${dlext}* ${libdir}
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libgomp.so' -> '/workspace/destdir/lib/libgomp.so'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libgomp.so.1' -> '/workspace/destdir/lib/libgomp.so.1'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libgomp.so.1.0.0' -> '/workspace/destdir/lib/libgomp.so.1.0.0'
+ ---> rm -f ${libdir}/*.a ${libdir}/*.py
+ ---> source "$_script"
+Child Process exited, exit code 0
+ ---> echo ***********************************************************
+LatestLibraries.v0.3.3.x86_64-linux-gnu.tar.gz
+ ---> rm -f ${prefix}/logs/LatestLibraries.log
+ ---> shopt -s nullglob
+ ---> for d in /opt/${target}/${target}/lib*
+ ---> cp -uav ${d}/*.${dlext}* ${libdir}/
+BusyBox v1.29.3 (2019-01-24 07:45:07 UTC) multi-call binary.
+
+Usage: cp [OPTIONS] SOURCE... DEST
+
+Copy SOURCE(s) to DEST
+
+	-a	Same as -dpR
+	-R,-r	Recurse
+	-d,-P	Preserve symlinks (default if -R)
+	-L	Follow all symlinks
+	-H	Follow symlinks on command line
+	-p	Preserve file attributes if possible
+	-f	Overwrite
+	-i	Prompt before overwrite
+	-l,-s	Create (sym)links
+	-T	Treat DEST as a normal file
+	-u	Copy only newer files
+ ---> true
+ ---> for d in /opt/${target}/${target}/lib*
+ ---> cp -uav ${d}/*.${dlext}* ${libdir}/
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libasan.so' -> '/workspace/destdir/lib/libasan.so'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libasan.so.4' -> '/workspace/destdir/lib/libasan.so.4'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libasan.so.4.0.0' -> '/workspace/destdir/lib/libasan.so.4.0.0'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libatomic.so' -> '/workspace/destdir/lib/libatomic.so'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libatomic.so.1' -> '/workspace/destdir/lib/libatomic.so.1'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libatomic.so.1.2.0' -> '/workspace/destdir/lib/libatomic.so.1.2.0'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libcilkrts.so' -> '/workspace/destdir/lib/libcilkrts.so'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libcilkrts.so.5' -> '/workspace/destdir/lib/libcilkrts.so.5'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libcilkrts.so.5.0.0' -> '/workspace/destdir/lib/libcilkrts.so.5.0.0'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libgcc_s.so' -> '/workspace/destdir/lib/libgcc_s.so'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libgcc_s.so.1' -> '/workspace/destdir/lib/libgcc_s.so.1'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libgfortran.so' -> '/workspace/destdir/lib/libgfortran.so'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libgfortran.so.4' -> '/workspace/destdir/lib/libgfortran.so.4'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libgfortran.so.4.0.0' -> '/workspace/destdir/lib/libgfortran.so.4.0.0'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libitm.so' -> '/workspace/destdir/lib/libitm.so'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libitm.so.1' -> '/workspace/destdir/lib/libitm.so.1'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libitm.so.1.0.0' -> '/workspace/destdir/lib/libitm.so.1.0.0'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/liblsan.so' -> '/workspace/destdir/lib/liblsan.so'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/liblsan.so.0' -> '/workspace/destdir/lib/liblsan.so.0'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/liblsan.so.0.0.0' -> '/workspace/destdir/lib/liblsan.so.0.0.0'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libmpx.so' -> '/workspace/destdir/lib/libmpx.so'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libmpx.so.2' -> '/workspace/destdir/lib/libmpx.so.2'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libmpx.so.2.0.1' -> '/workspace/destdir/lib/libmpx.so.2.0.1'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libmpxwrappers.so' -> '/workspace/destdir/lib/libmpxwrappers.so'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libmpxwrappers.so.2' -> '/workspace/destdir/lib/libmpxwrappers.so.2'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libmpxwrappers.so.2.0.1' -> '/workspace/destdir/lib/libmpxwrappers.so.2.0.1'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libobjc.so' -> '/workspace/destdir/lib/libobjc.so'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libobjc.so.4' -> '/workspace/destdir/lib/libobjc.so.4'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libobjc.so.4.0.0' -> '/workspace/destdir/lib/libobjc.so.4.0.0'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libquadmath.so' -> '/workspace/destdir/lib/libquadmath.so'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libquadmath.so.0' -> '/workspace/destdir/lib/libquadmath.so.0'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libquadmath.so.0.0.0' -> '/workspace/destdir/lib/libquadmath.so.0.0.0'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libssp.so' -> '/workspace/destdir/lib/libssp.so'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libssp.so.0' -> '/workspace/destdir/lib/libssp.so.0'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libssp.so.0.0.0' -> '/workspace/destdir/lib/libssp.so.0.0.0'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libstdc++.so.6.0.23' -> '/workspace/destdir/lib/libstdc++.so.6.0.23'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libstdc++.so.6.0.23-gdb.py' -> '/workspace/destdir/lib/libstdc++.so.6.0.23-gdb.py'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libtsan.so' -> '/workspace/destdir/lib/libtsan.so'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libtsan.so.0' -> '/workspace/destdir/lib/libtsan.so.0'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libtsan.so.0.0.0' -> '/workspace/destdir/lib/libtsan.so.0.0.0'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libubsan.so' -> '/workspace/destdir/lib/libubsan.so'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libubsan.so.0' -> '/workspace/destdir/lib/libubsan.so.0'
+'/opt/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libubsan.so.0.0.0' -> '/workspace/destdir/lib/libubsan.so.0.0.0'
+ ---> [[ ${target} == *mingw* ]]
+ ---> rm -f ${libdir}/*.a ${libdir}/*.py
+ ---> for f in ${libdir}/*.so
+ ---> [[ "$(file -b "$f")" != ELF* ]]
+ ---> rm -f "$f"
+ ---> for f in ${libdir}/*.so
+ ---> [[ "$(file -b "$f")" != ELF* ]]
+ ---> rm -f "$f"
+ ---> for f in ${libdir}/*.so
+ ---> [[ "$(file -b "$f")" != ELF* ]]
+ ---> rm -f "$f"
+ ---> for f in ${libdir}/*.so
+ ---> [[ "$(file -b "$f")" != ELF* ]]
+ ---> rm -f "$f"
+ ---> for f in ${libdir}/*.so
+ ---> [[ "$(file -b "$f")" != ELF* ]]
+ ---> rm -f "$f"
+ ---> for f in ${libdir}/*.so
+ ---> [[ "$(file -b "$f")" != ELF* ]]
+ ---> rm -f "$f"
+ ---> for f in ${libdir}/*.so
+ ---> [[ "$(file -b "$f")" != ELF* ]]
+ ---> rm -f "$f"
+ ---> for f in ${libdir}/*.so
+ ---> [[ "$(file -b "$f")" != ELF* ]]
+ ---> rm -f "$f"
+ ---> for f in ${libdir}/*.so
+ ---> [[ "$(file -b "$f")" != ELF* ]]
+ ---> rm -f "$f"
+ ---> for f in ${libdir}/*.so
+ ---> [[ "$(file -b "$f")" != ELF* ]]
+ ---> rm -f "$f"
+ ---> for f in ${libdir}/*.so
+ ---> [[ "$(file -b "$f")" != ELF* ]]
+ ---> rm -f "$f"
+ ---> for f in ${libdir}/*.so
+ ---> [[ "$(file -b "$f")" != ELF* ]]
+ ---> rm -f "$f"
+ ---> for f in ${libdir}/*.so
+ ---> [[ "$(file -b "$f")" != ELF* ]]
+ ---> rm -f "$f"
+ ---> for f in ${libdir}/*.so
+ ---> [[ "$(file -b "$f")" != ELF* ]]
+ ---> rm -f "$f"
+ ---> for f in ${libdir}/*.so
+ ---> [[ "$(file -b "$f")" != ELF* ]]
+ ---> rm -f "$f"
+ ---> for f in ${libdir}/*.so
+ ---> [[ "$(file -b "$f")" != ELF* ]]
+ ---> rm -f "$f"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> [[ ${target} == *apple* ]]
+ ---> install_license /usr/share/licenses/GPL3
+Installing license file "/usr/share/licenses/GPL3" to "/workspace/destdir/share/licenses/CompilerSupportLibraries/GPL3"...
+ ---> source "$_script"
+Child Process exited, exit code 0
